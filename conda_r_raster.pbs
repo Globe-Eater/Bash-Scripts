@@ -1,0 +1,24 @@
+
+#!/bin/bash
+#PBS -q express
+#PBS -l nodes=1:ppn=12
+#PBS -l walltime=:00:10:00
+#PBS -j oe
+#PBS -m abe -M bullokl@okstate.edu
+cd $PBS_O_WORKDIR
+
+module load anaconda3/2019.10 
+
+conda activate
+
+conda install -c r r
+conda install -c conda-forge r-fd r-raster r-naniar r-gdal r-dplyr
+
+R --file=/home/bullokl/Rasters/Computer5Phys11x11.R
+
+conda deactivate
+
+
+
+
+
