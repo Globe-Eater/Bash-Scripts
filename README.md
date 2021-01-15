@@ -1,2 +1,2 @@
 # Bash-Scripts
-These are for running programs on OSU's high performance computing center.
+Useful automation for backups, slurm cluster scheduling, and C compiling programs.
